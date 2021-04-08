@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang='en',dir="ltr">
+ <head>
+  <meta charset='UTF-8'>
+      <h1 style="colour: green; font-size:16px">Flight Price Prediction</h1>
+      <style>
+          body {background-color:pink;}
+     </style>
+  </head>
+     <body>
+     
+         
+         <center>
+             <br><br><br><br><br><br>
+         <form action="\predict" method="post">
+    
+          <!-- Departure time -->
+          <b>
+          Departure Time  : <input type="datetime-local" id="Dep_Time" placeholder="Departure Time" name="Dep_Time" required="required">
+          <br><br><br>       
+           <!-- Arrival time -->
+          Arrival Time  : <input type="datetime-local" id="Arrival_Time" placeholder="Arrival Time" name="Arrival_Time" required="required">
+          <br><br><br> 
+          Source : <select id="Source" name="Source" required="required">
+           <option value="">-----</option>
+           <option value="Delhi">Delhi</option>
+           <option value="Kolkata">Kolkata</option>
+           <option value="Mumbai">Mumbai</option>
+           <option value="Chennai">Chennai</option>
+              
+         </select>         
+         Destination : <select id="Destination" name="Destination" required="required">
+           <option value="">-----</option>
+            <option value="Cochin">Cochin</option>
+            <option value="Delhi">Delhi</option>
+            <option value="New Delhi">New Delhi</option>
+            <option value="Hyderabad">Hyderabad</option>
+            <option value="Kolkata">Kolkata</option>
+         </select>
+              
+        <br><br><br>
+      <!-- Number of stops -->
+         Number of stops : <select id='stops' name="stops" required="required">
+          <option value="0">Non-Stop</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+       <br><br><br>
+              
+        <!-- Airline -->
+      Airline : <select id="airline" name="airline" required="required">
+          <option value="Jet Airways">Jet Airways</option>
+          <option value="IndiGo">IndiGo</option>
+          <option value="Air India">Air India</option>
+          <option value="Multiple carriers">Multiple carriers</option>
+          <option value="SpiceJet">SpiceJet</option>
+          <option value="Vistara">Vistara</option>
+          <option value="Air Asia">Air Asia</option>
+          <option value="GoAir">GoAir</option>
+          <option value="Multiple carriers Premium economy">Multiple carriers Premium economy</option>
+          <option value="Jet Airways Business">Jet Airways Business</option>
+          <option value="Vistara Premium economy">Vistara Premium economy</option>
+          <option value="Trujet">Trujet</option>       
+        </select>
+<br><br><br>
+<input type="submit" value="predict"></b>
+</form>
+<br><br><br>
+<h3>{{prediction_text}}</h3>
+
+    </center>
+  </body>
+</html>
+
+       
+
+      
